@@ -3,30 +3,27 @@
 
 using namespace omm::truthvalue;
 
-const string TruthValue::stringValue[] = { "false", "true", "undefined" };
-
-TruthValue::TruthValue() : value(2) {}
+const string TruthValue::stringValues[] = { "false", "true", "undefined" };
+const TruthValue TruthValue::truthValues[] = { TruthValue(0), TruthValue(1), TruthValue(2) };
 
 TruthValue::TruthValue(int value) : value(value) {}
 
-TruthValue::TruthValue(string stringValue) {
-    this->value = 2;
+TruthValue TruthValue::getTruthValue() { return TruthValue::truthValues[2]; }
+
+TruthValue TruthValue::getTruthValue(int value) {
+    if (value < 0 || value > 2) throw exception();
+    return TruthValue::truthValues[value];
+}
+
+TruthValue TruthValue::getTruthValue(string stringValue) {
     for (int i = 0; i < 3; i++)
-        if (TruthValue::stringValue[i] == stringValue)
-            this->value = i;
+        if (stringValue == stringValues[i])
+            return truthValues[i];
+    return truthValues[2];
 }
 
 TruthValue::~TruthValue() {}
 
 int TruthValue::getValue() { return this->value; }
 
-void TruthValue::setValue(int value) { this->value = value; }
-
-void TruthValue::setValue(string stringValue) {
-    this->value = 2;
-    for (int i = 0; i < 3; i++)
-        if (TruthValue::stringValue[i] == stringValue)
-            this->value = i;
-}
-
-string TruthValue::toString() { return TruthValue::stringValue[this->value]; }
+string TruthValue::toString() { return TruthValue::stringValues[this->value]; }
