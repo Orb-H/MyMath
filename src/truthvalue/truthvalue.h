@@ -18,8 +18,10 @@ namespace omm {
             TruthValue(string stringValue);
             ~TruthValue();
 
-            // getter
+            // getter / setter
             int getValue();
+            void setValue(int value);
+            void setValue(string stringValue);
             string toString();
         };
     }
