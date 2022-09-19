@@ -18,9 +18,9 @@ namespace omm {
             ~TruthValue();
         public:
             // ctor alternatives
-            TruthValue getTruthValue();
-            TruthValue getTruthValue(int value);
-            TruthValue getTruthValue(string stringValue);
+            static TruthValue getTruthValue();
+            static TruthValue getTruthValue(int value);
+            static TruthValue getTruthValue(string stringValue);
 
             // getter / setter
             int getValue();
