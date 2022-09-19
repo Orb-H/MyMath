@@ -22,8 +22,6 @@ TruthValue TruthValue::getTruthValue(string stringValue) {
     return truthValues[2];
 }
 
-TruthValue::~TruthValue() {}
-
 int TruthValue::getValue() { return this->value; }
 
 string TruthValue::toString() { return TruthValue::stringValues[this->value]; }

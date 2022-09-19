@@ -13,9 +13,8 @@ namespace omm {
             static const string stringValues[];
             static const TruthValue truthValues[];
 
-            // ctor / detor
+            // ctor
             TruthValue(int value);
-            ~TruthValue();
         public:
             // ctor alternatives
             static TruthValue getTruthValue();
