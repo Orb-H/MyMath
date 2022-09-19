@@ -9,6 +9,7 @@ namespace omm {
     namespace truthvalue {
         class TruthValue {
         private:
+            // internal values
             int value;
             static const string stringValues[];
             static const TruthValue truthValues[];
