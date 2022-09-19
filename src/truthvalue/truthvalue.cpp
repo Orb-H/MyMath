@@ -3,11 +3,13 @@
 
 using namespace omm::truthvalue;
 
-const string TruthValue::stringValues[] = { "false", "true", "undefined" };
-const TruthValue TruthValue::truthValues[] = { TruthValue(0), TruthValue(1), TruthValue(2) };
+const string TruthValue::stringValues[] = { "false", "true", "undefined" }; // for toString
+const TruthValue TruthValue::truthValues[] = { TruthValue(0), TruthValue(1), TruthValue(2) }; // for singleton
 
+// constructor
 TruthValue::TruthValue(int value) : value(value) {}
 
+// singleton functions
 TruthValue TruthValue::getTruthValue() { return TruthValue::truthValues[2]; }
 
 TruthValue TruthValue::getTruthValue(int value) {
@@ -22,6 +24,6 @@ TruthValue TruthValue::getTruthValue(string stringValue) {
     return truthValues[2];
 }
 
+// getter
 int TruthValue::getValue() { return this->value; }
-
 string TruthValue::toString() { return TruthValue::stringValues[this->value]; }
