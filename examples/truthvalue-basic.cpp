@@ -2,11 +2,11 @@
 #include "src/omm.h"
 
 using namespace std;
-using namespace omm;
+using namespace omm::truthvalue;
 
 int main() {
-    truthvalue::TruthValue a(0), b(1), c(2);
-    truthvalue::TruthValue d("false"), e("true"), f("undefined");
+    TruthValue a = TruthValue::getTruthValue(0), b = TruthValue::getTruthValue(1), c = TruthValue::getTruthValue(2);
+    TruthValue d = TruthValue::getTruthValue("false"), e = TruthValue::getTruthValue("true"), f = TruthValue::getTruthValue("undefined");
 
     cout << a.toString() << " " << b.toString() << " " << c.toString() << endl;
     cout << d.getValue() << " " << e.getValue() << " " << f.getValue() << endl;
