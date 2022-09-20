@@ -3,8 +3,8 @@
 
 using namespace omm::truthvalue;
 
-const string TruthValue::stringValues[] = { "false", "true", "undefined" }; // for toString
-const TruthValue TruthValue::truthValues[] = { TruthValue(0), TruthValue(1), TruthValue(2) }; // for singleton
+const string TruthValue::stringValues[3] = { "false", "true", "undefined" }; // for toString
+const TruthValue TruthValue::truthValues[3] = { TruthValue(0), TruthValue(1), TruthValue(2) }; // for singleton
 
 // constructor
 TruthValue::TruthValue(int value) : value(value) {}

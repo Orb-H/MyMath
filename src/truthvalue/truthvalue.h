@@ -11,8 +11,8 @@ namespace omm {
         private:
             // internal values
             int value;
-            static const string stringValues[]; // for toString
-            static const TruthValue truthValues[]; // for singleton
+            static const string stringValues[3]; // for toString
+            static const TruthValue truthValues[3]; // for singleton
 
             // ctor
             TruthValue(int value);
