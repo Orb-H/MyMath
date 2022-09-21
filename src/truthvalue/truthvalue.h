@@ -25,6 +25,7 @@ namespace omm {
             // getter
             int getValue();
             string toString();
+            friend std::ostream& operator<<(std::ostream& os, TruthValue& value);
         };
     }
 }

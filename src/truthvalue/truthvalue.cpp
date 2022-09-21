@@ -27,5 +27,6 @@ namespace omm {
         // getter
         int TruthValue::getValue() { return this->value; }
         string TruthValue::toString() { return TruthValue::stringValues[this->value]; }
+        std::ostream& operator<<(std::ostream& os, TruthValue& value) { return os << value.toString(); }
     }
 }
