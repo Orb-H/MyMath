@@ -23,9 +23,9 @@ namespace omm {
             static TruthValue getTruthValue(string stringValue);
 
             // getter
-            int getValue();
-            string toString();
-            friend std::ostream& operator<<(std::ostream& os, TruthValue& value);
+            int getValue() const;
+            string toString() const;
+            friend std::ostream& operator<<(std::ostream& os, const TruthValue& value);
         };
     }
 }
